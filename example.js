@@ -1,5 +1,5 @@
 function fetchData() {
-  fetch("https://localhost:44351/api/staffmembers/read")
+  fetch("https://localhost:44351/api/StaffMembers")
     .then(response => {
       console.log(response);
       if (!response.ok) {
@@ -28,9 +28,6 @@ function fetchData() {
       console.log(error); 
     });
 }
-
-fetchData();
-
 
 
 
@@ -61,6 +58,72 @@ function postData() {
     });
 }
 
+
+function updateData() {
+  fetch("https://localhost:44351/api/staffmembers/update/18", {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      Id:"18",
+      FirstName:"Lucy",
+      LastName:"Andrews",
+      Title:"Miss"
+    })
+  })
+    .then(response => {
+      console.log(response);
+      if (!response.ok) {
+        throw Error("ERROR");
+      }
+      return response.json();	
+    })
+    .then(data => {
+      console.log(data) 
+    })
+    .catch(error => {
+      console.log(error); 
+    });
+}
+
+
+function deleteData() {
+  fetch("https://localhost:44351/api/staffmembers/delete/18", {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      Id:"18",
+      FirstName:"Lucy",
+      LastName:"Andrews",
+      Title:"Miss"
+    })
+  })
+    .then(response => {
+      console.log(response);
+      if (!response.ok) {
+        throw Error("ERROR");
+      }
+      return response.json();	
+    })
+    .then(data => {
+      console.log(data) 
+    })
+    .catch(error => {
+      console.log(error); 
+    });
+}
+
+
+
+
 postData();
+updateData();
+deleteData();
+fetchData();
+
+
 
 

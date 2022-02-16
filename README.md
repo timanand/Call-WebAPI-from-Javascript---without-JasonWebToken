@@ -20,34 +20,31 @@ The following are mandatory for the CoreDemoWebAPI application to run:
 ## Usage
 
 You need to run the CoreDemoWebAPI which will launch browser.
+
+Open file, 'example.js' and edit the data appropriate for adding, updating, deleting.
+
+NOTE: this file runs procedures :
+
+
+postData();
+updateData();
+deleteData();
+fetchData();
+
+
 Open file, 'index.html' from this project in Chrome Browser.
 
-Right mouse click and select 'Inspect' from the menu.
-Click on 'Console' tab.
+---> It should display data on screen. Also, it is worthwhile looking at the records in the
+'StaffMembers' to cross check.
 
 
-It will display errors as in screenshot file, 'ScreenShot_Error_WorkLaptop.jpg'.
 
-
-I copied the project onto my personal laptop, and installed Chrome Extension, 'Moesif Origin & CORS Changer'
-and enabled this 'ON'. 
-
----> api/staffmembers/read 
-then worked on my personal laptop. See 'Screenshot_Output_GET.jpg'.
-
-
-However, api/staffmembers/create
-failed to work on my personal laptop. See 'Screenshot_Error_DueToPost_In_GoogleChrome_Console.jpg'.
 
 
 
 IMPORTANT NOTES:
 
-api/staffmembers/read 
-api/staffmembers/create
 
-both worked via PostMan but running through Google Chrome, there are additional security issues.
-I shall revisit this at a later time and plus I shall discuss with Brynjar at the next Dev Catch up meeting.
 
 
 
